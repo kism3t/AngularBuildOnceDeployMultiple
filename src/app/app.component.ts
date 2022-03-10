@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+import { AppConfigService } from './services/app-config.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-build-once-deploy-multiple';
+
+  constructor( private appConfigService: AppConfigService) {}
+
+  title = 'Build Once Deploy Multiple Times';
+  helloWorldEnvironment = environment.helloWorld;
+  helloWorldAppConfig = "Test";
+  helloWorldAppConfig = this.appConfigService.getConfig().helloWorld;
+
 }

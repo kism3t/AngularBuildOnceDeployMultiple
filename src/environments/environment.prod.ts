@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  helloWorld: 'Hello World from environment.prod.ts'
 };
