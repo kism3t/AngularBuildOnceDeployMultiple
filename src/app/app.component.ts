@@ -14,7 +14,5 @@ export class AppComponent {
 
   title = 'Build Once Deploy Multiple Times';
   helloWorldEnvironment = environment.helloWorld;
-  helloWorldAppConfig = "Test";
   helloWorldAppConfig = this.appConfigService.getConfig().helloWorld;
-
 }
