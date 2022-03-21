@@ -1,9 +1,9 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
-import { AppConfigService } from "./services/app-config.service";
 
+import { AppConfigService } from "./services/app-config.service";
 import { AppComponent } from './app.component';
-import {HttpClientModule} from "@angular/common/http";
 
 const appInitializerFn = (appConfig: AppConfigService) => {
   return () => {
@@ -16,7 +16,8 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     AppComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     AppConfigService,
