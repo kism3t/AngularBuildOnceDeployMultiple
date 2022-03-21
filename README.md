@@ -44,7 +44,9 @@ import { environment } from '../environment/environment';
 ...
 console.log(environment.production);
 ```
+
 For different environments, you can create new files called e.g. environment.uat.ts . To finalize you just need to add it to angular.json
+
 ```json
 // angular.json
 {
